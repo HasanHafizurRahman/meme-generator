@@ -1,9 +1,16 @@
 import styles from "../Styles/Meme.module.css";
+import memeData from "../memeData";
 
 const Meme = () => {
+  function handleClick() {
+    const memesArray = memeData.data.memes;
+    const randomindex = Math.floor(Math.random() * memesArray.length);
+    const url = memesArray[randomindex].url;
+    console.log(url);
+  }
   return (
-    <div>
-      <form className={styles.form}>
+    <main>
+      <div className={styles.form}>
         <input
           className={styles.form_input}
           type="text"
@@ -14,9 +21,11 @@ const Meme = () => {
           type="text"
           placeholder="Bottom Text"
         />
-        <button className={styles.form_button}>Get a new meme image 🖼</button>
-      </form>
-    </div>
+        <button onClick={handleClick} className={styles.form_button}>
+          Get a new meme image 🖼
+        </button>
+      </div>
+    </main>
   );
 };
 
