@@ -1,6 +1,5 @@
 .navbar {
-  position: absolute;
-  width: 550px;
+  /* width: 550px; */
   height: 65px;
   color: white;
   background: linear-gradient(90deg, #672280 1.18%, #a626d3 100%);
